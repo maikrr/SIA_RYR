@@ -1,0 +1,66 @@
+<h3 mat-dialog-title>Producto</h3>
+<div mat-dialog-content class="grid">
+  <mat-form-field appearance="outline">
+    <mat-label>SKU</mat-label>
+    <input matInput formControlName="sku">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="span2">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="span2">
+    <mat-label>Descripción</mat-label>
+    <input matInput formControlName="descripcion">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Unidad de medida</mat-label>
+    <mat-select formControlName="unidad_medida">
+      <mat-option value="u">Unidad</mat-option>
+      <mat-option value="kg">Kilogramo</mat-option>
+      <mat-option value="m">Metro</mat-option>
+      <mat-option value="caja">Caja</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="span2">
+    <mat-label>Códigos de barra (coma-separados)</mat-label>
+    <input matInput formControlName="codigos_barra_txt" placeholder="e.g. 789..., 123...">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Categoría</mat-label>
+    <input matInput formControlName="categoria_id">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Marca</mat-label>
+    <input matInput formControlName="marca">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Precio venta (con IVA)</mat-label>
+    <input matInput type="number" step="0.01" formControlName="precio_venta_bruto">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="span2">
+    <mat-label>Palabras clave (coma-separadas)</mat-label>
+    <input matInput formControlName="palabras_clave">
+  </mat-form-field>
+
+  <mat-slide-toggle formControlName="gestion_stock">Gestiona stock</mat-slide-toggle>
+  <mat-form-field appearance="outline">
+    <mat-label>Stock mínimo</mat-label>
+    <input matInput type="number" formControlName="stock_minimo">
+  </mat-form-field>
+
+  <mat-slide-toggle formControlName="es_catalogo">Vender bajo catálogo</mat-slide-toggle>
+  <mat-slide-toggle formControlName="activo">Activo</mat-slide-toggle>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="cerrar()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="guardar()">Guardar</button>
+</div>

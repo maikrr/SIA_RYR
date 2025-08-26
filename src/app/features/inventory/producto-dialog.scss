@@ -1,0 +1,6 @@
+.grid{
+  display:grid;
+  gap:12px;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+}
+.span2{ grid-column: span 2; }
