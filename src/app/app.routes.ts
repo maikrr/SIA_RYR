@@ -10,6 +10,7 @@ export const routes: Routes = [
       { path: 'inventario', loadComponent: () => import('./features/inventory/inventory').then(m => m.InventoryComponent) },
       { path: 'compras',    loadComponent: () => import('./features/purchases/purchases').then(m => m.PurchasesComponent) },
       { path: 'ventas',     loadComponent: () => import('./features/sales/sales').then(m => m.SalesComponent) },
+      { path: 'listas-precios', loadComponent: () => import('./features/listas/listas').then(m => m.ListasComponent) },
     ]
   },
   { path: '**', redirectTo: '' }

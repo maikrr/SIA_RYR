@@ -27,7 +27,7 @@ export class InventoryComponent {
   private snack = inject(MatSnackBar);
 
   filtro = signal('');
-  columnas = ['sku', 'nombre', 'precio', 'gestion', 'catalogo', 'acciones'] as const;
+  columnas = ['sku','nombre','precio','gestion','catalogo','acciones'] as const;
   productos = signal<Producto[]>([]);
 
   constructor() {

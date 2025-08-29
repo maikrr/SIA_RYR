@@ -1,0 +1,8 @@
+.uploader{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 12px;
+  align-items: end;
+  margin: 16px 0 24px;
+}
+table{ width: 100%; }
